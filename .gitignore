@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Firebase secrets
+*.json
+
+# OS
+.DS_Store
+
+# Node (frontend)
+node_modules/
+
+# Firebase hosting
+.firebase/

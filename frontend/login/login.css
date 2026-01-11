@@ -1,0 +1,257 @@
+/* ===============================
+   THEME VARIABLES
+================================ */
+:root {
+  --bg-gradient: linear-gradient(180deg, #0b1220, #0a1020);
+  --grid-line: rgba(255, 255, 255, 0.035);
+
+  --card-bg: linear-gradient(180deg, #0f1a30, #0b1528);
+  --text-main: #ffffff;
+  --text-muted: #9ca3af;
+  --input-bg: #0b1220;
+}
+
+/* Light Mode */
+body.light {
+  --bg-gradient: linear-gradient(180deg, #f3f6fb, #e9eef7);
+  --grid-line: rgba(0, 0, 0, 0.05);
+
+  --card-bg: linear-gradient(180deg, #ffffff, #f3f6fb);
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --input-bg: #f1f5f9;
+}
+
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ===============================
+   BODY + BACKGROUND
+================================ */
+body {
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Square grid background */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  pointer-events: none;
+}
+
+/* Vignette depth */
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 30%,
+    rgba(0,0,0,0.6) 100%
+  );
+  pointer-events: none;
+}
+
+/* ===============================
+   LOGIN LAYOUT
+================================ */
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.login-card {
+  width: 380px;
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.06),
+    0 25px 60px rgba(0,0,0,0.8);
+}
+
+.login-card h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 6px;
+  color: var(--text-main);
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 26px;
+}
+
+/* ===============================
+   INPUTS (kept for future use)
+================================ */
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  display: block;
+  color: var(--text-muted);
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--input-bg);
+  color: var(--text-main);
+}
+
+.input-group input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59,130,246,0.4);
+  outline: none;
+}
+
+/* ===============================
+   DEFAULT BUTTON
+================================ */
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+button:hover {
+  box-shadow: 0 10px 25px rgba(37,99,235,0.35);
+  transform: translateY(-1px);
+}
+
+/* ===============================
+   GOOGLE LOGIN BUTTON
+================================ */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+
+  background: #ffffff;
+  color: #111827;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.google-btn img {
+  width: 18px;
+}
+
+.google-btn:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+body.light .google-btn {
+  background: #ffffff;
+}
+
+/* ===============================
+   FOOTER TEXT
+================================ */
+.footer-text {
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* ===============================
+   THEME TOGGLE BUTTON
+================================ */
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+
+  width: 36px;
+  height: 36px;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-main);
+
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  z-index: 2;
+}
+
+body.light .theme-toggle {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   OR DIVIDER
+================================ */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 22px 0;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.divider span {
+  padding: 0 10px;
+}

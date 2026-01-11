@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Page | WatchTower</title>
+  <link rel="stylesheet" href="add-page.css"/>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR (IDENTICAL TO DASHBOARD) -->
+  <aside class="sidebar">
+    <div class="logo">
+      👁 WatchTower
+      <small>Web Alert System</small>
+    </div>
+
+    <nav class="nav"> 
+      <a href="../Dashboard/index.html">📊 Dashboard</a> 
+      <a href="../Add_Page/add-page.html">➕ Add Page</a> 
+      <a href="../Alerts_feed/alert.html">🔔 Alerts</a> 
+      <a href="../Demo_Page/demo.html">🧪 Demo Page</a> 
+      <a href="../How_It_Works/how.html">❓ How It Works</a> 
+    </nav>
+
+    <div id="themeToggle" class="theme-toggle">☀️ Light Mode</div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main narrow">
+    <h1>Add Page to Monitor</h1>
+    <p class="subtitle">Set up keyword-based monitoring for any webpage</p>
+
+    <section class="panel">
+      <h3>🔗 Website URL</h3>
+      <p class="hint">Enter the full URL of the page you want to monitor</p>
+      <input id="urlInput" type="url"placeholder="https://example.com/opportunities"/>
+
+    </section>
+
+    <section class="panel">
+      <h3>👁 Keywords to Monitor</h3>
+      <p class="hint">Select preset keywords or add your own</p>
+
+      <div class="presets">
+        <button class="chip">+ deadline</button>
+        <button class="chip">+ apply</button>
+        <button class="chip">+ registration</button>
+        <button class="chip">+ closed</button>
+        <button class="chip">+ opening</button>
+        <button class="chip">+ submit</button>
+        <button class="chip">+ last chance</button>
+        <button class="chip">+ expired</button>
+        <button class="chip">+ announcement</button>
+        <button class="chip">+ update</button>
+        <button class="chip">+ new</button>
+        <button class="chip">+ urgent</button>
+      </div>
+
+      <div class="custom">
+        <input id="customInput" placeholder="Add custom keyword...">
+        <button id="addKeyword">Add</button>
+      </div>
+
+      <div id="selected" class="selected"></div>
+    </section>
+
+    <section class="panel toggle">
+      <div>
+        <h3>⚡ Demo Mode</h3>
+        <p class="hint">Check every 20 seconds instead of 15 minutes</p>
+      </div>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </section>
+
+    <button class="cta" id="startMonitoring">✔ Start Monitoring</button>
+
+
+  </main>
+
+</div>
+
+<script src="add-page.js"></script>
+</body>
+</html>

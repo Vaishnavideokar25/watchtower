@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WatchTower Dashboard</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      👁 WatchTower<br />
+      <span>Web Alert System</span>
+    </div>
+
+    <nav class="nav">
+      <a href="../Dashboard/index.html" class="active">📊 Dashboard</a>
+      <a href="../Add_Page/add-page.html">➕ Add Page</a>
+      <a href="../Alerts_feed/alert.html">🔔 Alerts</a>
+      <a href="../Demo_Page/demo.html">🧪 Demo Page</a>
+      <a href="../How_It_Works/how.html">❓ How It Works</a>
+    </nav>
+
+    <div class="theme-toggle" id="themeToggle">
+      🌙 Toggle Theme
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="dashboard-header">
+      <div>
+        <h1>Dashboard</h1>
+        <p class="subtitle">
+          Monitor your web pages and track important changes
+        </p>
+      </div>
+
+      <a
+        href="https://calendar.google.com/calendar/u/0/r"
+        target="_blank"
+        class="calendar-btn"
+      >
+        📅 View Google Calendar
+      </a>
+    </div>
+
+    <!-- Stats -->
+    <section class="stats">
+      <div class="card">
+        <p>Monitored Pages</p>
+        <h2 id="pageCount">0</h2>
+      </div>
+
+      <div class="card">
+        <p>Active Alerts</p>
+        <h2 id="alertCount">0</h2>
+      </div>
+
+      <div class="card">
+        <p>Last Check</p>
+        <h2>15 min ago</h2>
+      </div>
+
+      <div class="card">
+        <p>Demo Mode</p>
+        <h2>Off</h2>
+      </div>
+    </section>
+
+    <!-- Monitored Pages -->
+    <section class="panel">
+      <h3>Monitored Pages</h3>
+      <div id="pagesContainer"></div>
+    </section>
+
+    <!-- Alerts -->
+    <section class="panel">
+      <h3>Recent Alerts</h3>
+      <div id="alertsContainer"></div>
+    </section>
+  </main>
+
+</div>
+
+<!-- ONLY ONE SCRIPT -->
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

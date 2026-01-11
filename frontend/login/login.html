@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login | WatchTower</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+
+  <!-- 🌙 Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+    🌙
+  </button>
+
+  <!-- 🔐 Login Card -->
+  <div class="login-container">
+    <div class="login-card">
+      <h1>WatchTower</h1>
+      <p class="subtitle">Login to your account</p>
+
+      <!-- 🔵 GOOGLE LOGIN ONLY -->
+      <button id="googleLogin" class="google-btn">
+        <img
+          src="https://developers.google.com/identity/images/g-logo.png"
+          alt="Google"
+        />
+        Continue with Google
+      </button>
+
+      <p class="footer-text">
+        New user? We’ll create an account automatically.
+      </p>
+    </div>
+  </div>
+  
+  <!-- 🔥 FIREBASE + GOOGLE LOGIN LOGIC -->
+  <script type="module" src="login.js"></script>
+
+</body>
+</html>

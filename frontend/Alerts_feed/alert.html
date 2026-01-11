@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alerts | WatchTower</title>
+  <link rel="stylesheet" href="alert.css"/>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR (SAME ACROSS ALL PAGES) -->
+  <aside class="sidebar">
+    <div class="logo">
+      👁 WatchTower
+      <small>Web Alert System</small>
+    </div>
+
+    <nav class="nav"> 
+      <a href="../Dashboard/index.html">📊 Dashboard</a> 
+      <a href="../Add_Page/add-page.html">➕ Add Page</a> 
+      <a href="../Alerts_feed/alert.html" class="active">🔔 Alerts</a> 
+      <a href="../Demo_Page/demo.html">🧪 Demo Page</a> 
+      <a href="../How_It_Works/how.html">❓ How It Works</a> 
+    </nav>
+
+    <div id="themeToggle" class="theme-toggle">☀️ Light Mode</div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <header class="alerts-header">
+      <div>
+        <h1>Alerts Feed</h1>
+        <p class="subtitle">AI-detected important updates</p>
+      </div>
+
+      <div class="filters">
+        <button class="filter active">All</button>
+        <button class="filter">High</button>
+        <button class="filter">Medium</button>
+        <button class="filter">Low</button>
+      </div>
+    </header>
+
+    <!-- 🔥 ALERTS FROM BACKEND WILL LOAD HERE -->
+    <div id="alertsContainer"></div>
+
+  </main>
+
+</div>
+
+<script src="alert.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How It Works | WatchTower</title>
+  <link rel="stylesheet" href="./how.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">
+      📡 WatchTower
+      <small>Web Alert System</small>
+    </div>
+    
+    <nav class="nav"> 
+      <a href="../Dashboard/index.html">📊 Dashboard</a> 
+      <a href="../Add_Page/add-page.html">➕ Add Page</a> 
+      <a href="../Alerts_feed/alert.html">🔔 Alerts</a> 
+      <a href="../Calendar/calendar.html">📅 Calendar</a> 
+      <a href="../Demo_Page/demo.html">🧪 Demo Page</a> 
+      <a href="../How_It_Works/how.html" class="active">❓ How It Works</a> 
+    </nav>
+
+    <div id="themeToggle" class="theme-toggle">☀️ Light Mode</div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <header class="hero">
+      <span class="pill">WatchTower</span>
+      <h1>How It Works</h1>
+      <p>
+        WatchTower detects meaningful webpage changes and helps users act on them intelligently.
+      </p>
+    </header>
+
+    <!-- STEPS -->
+    <section class="panel">
+      <h3>Simple 5-Step Workflow</h3>
+
+      <div class="steps">
+        <div class="step">
+          <span>1</span>
+          <div>
+            <h4>Secure login</h4>
+            <p>Users authenticate using Firebase Authentication.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span>2</span>
+          <div>
+            <h4>Add a webpage</h4>
+            <p>Users enter a URL and keywords they want to track.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span>3</span>
+          <div>
+            <h4>Backend processing (Python)</h4>
+            <p>
+              A Python backend fetches webpage content and detects
+              meaningful changes based on keywords.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span>4</span>
+          <div>
+            <h4>AI-powered interpretation</h4>
+            <p>
+              Gemini (Vertex AI API) analyzes detected changes to explain
+              their importance and suggest next actions.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span>5</span>
+          <div>
+            <h4>Take action</h4>
+            <p>
+              Important deadlines can be added directly to Google Calendar
+              for timely reminders.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="panel">
+      <h3>Why Use WatchTower?</h3>
+
+      <ul class="benefits">
+        <li>✅ Python-powered backend logic</li>
+        <li>✅ AI-driven understanding with Gemini</li>
+        <li>✅ Secure authentication via Firebase</li>
+        <li>✅ Never miss important deadlines</li>
+        <li>✅ Lightweight, cost-efficient architecture</li>
+      </ul>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="panel">
+      <h3>Technology Used</h3>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h4>🌐 HTML, CSS, JavaScript</h4>
+          <p>Frontend interface for dashboards, alerts, and calendar views.</p>
+        </div>
+
+        <div class="tech-card">
+          <h4>🐍 Python Backend</h4>
+          <p>
+            Handles webpage fetching, keyword detection,
+            and integration with AI services.
+          </p>
+        </div>
+
+        <div class="tech-card">
+          <h4>🤖 Gemini (Vertex AI API)</h4>
+          <p>
+            Interprets webpage changes and generates contextual explanations
+            and suggested actions.
+          </p>
+        </div>
+
+        <div class="tech-card">
+          <h4>🔥 Firebase Authentication</h4>
+          <p>Provides secure user authentication and session handling.</p>
+        </div>
+
+
+        <div class="tech-card">
+          <h4>📅 Google Calendar</h4>
+          <p>Adds deadlines and important events to the user’s calendar.</p>
+        </div>
+
+        <div class="tech-card">
+          <h4>💾 Local Storage</h4>
+          <p>Stores UI preferences such as light/dark theme.</p>
+        </div>
+      </div>
+    </section>
+
+    <button class="cta">Get Started</button>
+
+  </main>
+</div>
+
+<script src="./how.js"></script>
+</body>
+</html>

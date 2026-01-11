@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Demo Page | WatchTower</title>
+  <link rel="stylesheet" href="./demo.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR (GLOBAL) -->
+  <aside class="sidebar">
+    <div class="logo">
+      👁 WatchTower
+      <small>Web Alert System</small>
+    </div>
+
+    <nav class="nav"> 
+      <a href="../Dashboard/index.html">📊 Dashboard</a> 
+      <a href="../Add_Page/add-page.html">➕ Add Page</a> 
+      <a href="../Alerts_feed/alert.html">🔔 Alerts</a> 
+      <a href="../Demo_Page/demo.html">🧪 Demo Page</a> 
+      <a href="../How_It_Works/how.html">❓ How It Works</a> 
+    </nav>
+
+    <div id="themeToggle" class="theme-toggle">☀️ Light Mode</div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <header class="page-header">
+      <h1>⚡ Demo Page</h1>
+      <p>This page simulates real-world content changes for demo purposes</p>
+    </header>
+
+    <!-- HOW IT WORKS -->
+    <section class="panel">
+      <h3>How this demo works:</h3>
+      <ol class="steps">
+        <li><span>1</span> Click “Simulate Update” to change the content below</li>
+        <li><span>2</span> WatchTower detects the change and runs AI analysis</li>
+        <li><span>3</span> A <b>HIGH</b> priority alert appears in the Alerts feed</li>
+        <li><span>4</span> Add the deadline to your calendar with one click</li>
+      </ol>
+    </section>
+
+    <!-- SIMULATED PAGE -->
+    <section class="panel browser">
+      <div class="browser-bar">
+        https://scan-alert-gem.lovable.app/demo-page
+      </div>
+
+      <div id="demoContent" class="demo-content">
+        <div class="icon">🚧</div>
+        <h2>Internship Program</h2>
+        <p class="muted">Coming Soon</p>
+        <p>Check back later for application details.</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <button id="simulateBtn" class="cta">
+      ⚡ Simulate Update
+    </button>
+
+  </main>
+</div>
+
+<script src="./demo.js"></script>
+</body>
+</html>
