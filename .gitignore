@@ -15,3 +15,6 @@ node_modules/
 
 # Firebase hosting
 .firebase/
+
+
+backend/*firebase-adminsdk*.json
